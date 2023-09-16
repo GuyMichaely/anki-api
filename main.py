@@ -33,7 +33,7 @@ def endpoint(word):
 
   os.killpg(os.getpgid(process.pid), signal.SIGINT)
   db.addToDB(result)
-  process = subprocess.Popen(['python3', '-m', 'anki.syncserver'], env=env, preexec_fn=os.setsid)
+  process = subprocess.Popen(['python3', '-m', 'anki.syncserver'], env=env)
   return "success"
 
 if __name__ == '__main__':
