@@ -1,5 +1,5 @@
 # user will highlight a word and click "send to server"
-# if there are mutliple forms, browser will show a poup with the different forms and prompts for which ones to send
+# if there are mutliple forms, browser will show a poup with the different forms and prompts for which ones to send                           
 from flask import Flask, request
 import subprocess
 import os
@@ -10,8 +10,8 @@ import inflection as iad
 app = Flask(__name__)
 
 env = os.environ.copy()
-env['SYNC_USER1'] = 'user:pass'
-process = subprocess.Popen(['python', '-m', 'anki.syncserver'], env=env)
+env[''] = 'user:pass'
+# process = subprocess.Popen(['python', '-m', 'anki.syncserver'], env=env)
 def parseToHumanString(parse):
   return f'{parse.word}: {", ".join(parse.tag.grammemes)}'
 

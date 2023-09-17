@@ -1,0 +1,3 @@
+Flask
+pymorphy2
+anki
